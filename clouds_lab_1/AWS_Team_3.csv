@@ -1,0 +1,44 @@
+IT Tower;Service Family;Service Type;Service Sub Type;Service Usage Type;Product Code;Usage Type; [lineItem/Operation];lineItem/LineItemDescription
+Compute;Compute;Caching;Additional Costs;Tax;AmazonElastiCache;Tax%;;Tax%
+Compute;Compute;Caching;Cache;Node Usage;AmazonElastiCache;%NodeUsage:cache%;;
+Compute;Compute;Caching;Snapshot;Snapshot Creation;AmazonElastiCache;%CreateCacheSnapshot%;;
+Compute;Compute;Caching;Backup Usage;ElastiCacheBackup;AmazonElastiCache;%ElastiCache:BackupUsage;;
+Search & Analytics;Search & Analytics;Additional Costs;Additional Costs;Tax;AmazonES;;;Tax%
+Search & Analytics;Search & Analytics;Data Transfer;Outbound Data Transfer;Data Transfer;AmazonES;%DataTransfer%Bytes;;
+Search & Analytics;Search & Analytics;Data Transfer;Outbound Data Transfer;Data Transfer;AmazonES;%AWS%Bytes;;
+Search & Analytics;Search & Analytics;Storage;GP2 Storage;SSD Storage;AmazonES;%ES:GP2-Storage%;;
+Search & Analytics;Search & Analytics;Storage;Magnetic Storage;HDD Storage;AmazonES;%ES:Magnetic-Storage;;
+Search & Analytics;Search & Analytics;Instance Usage;ElasticSearch Instances;Instance Usage;AmazonES;%ESInstance%;;
+Search & Analytics;Search & Analytics;IOPS;Provisioned IOPS;IOPS;AmazonES;%PIOPS%;;
+Content Delivery;CDN;CloudFront;Data Transfer;Data Transfer;AmazonES;%CloudFront%;;
+Database;Ledger Database;Storage;QLDB Storage;Storage;AmazonQLDB;%Storage;;
+Database;Ledger Database;IO Operations;QLDB IO Request;IO Operations;AmazonQLDB;%IO-Request;;
+Security;Security & Identity;Additional Costs;Additional Costs;Tax;awskms;;;Tax%
+Security;Security & Identity;API Requests;KMS API Requests;Requests;awskms;%KMS-Requests;;
+Security;Security & Identity;Key Management;KMS Keys Usage;Key Usage;awskms;%KMS-Keys;;
+Security;Security & Identity;HSM Operations;CloudHSM Usage;HSM Operations;CloudHSM;%CloudHSM%;;
+AI & ML;Machine Learning;Image/Video Analysis;Recognition Usage;Image/Video Analysis;AmazonRekognition;;;
+AI & ML;Document Processing;Pages Processed;Forms Pages Processed;Forms Pages;AmazonTextract;%FormsPagesProcessed;;
+AI & ML;Document Processing;Pages Processed;Tables Pages Processed;Tables Pages;AmazonTextract;%TablesPagesProcessed;;
+AI & ML;Document Processing;Pages Processed;Tables Pages Processed;Text Pages;AmazonTextract;%TextPagesProcessed;;
+AI & ML;Conversational AI;Additional Costs;Additional Costs;Tax;AmazonLex;;;Tax%
+AI & ML;Conversational AI;API Requests;Lex Requests;Request Usage;AmazonLex;%Req%;;
+DevOps;DevOps;Additional Costs;Additional Costs;Tax;AWSCodePipeline;;;Tax%
+DevOps;DevOps;Trial Pipelines;Pipeline Usage;Trial Pipeline Usage;AWSCodePipeline;%trialPipeline%;;
+DevOps;DevOps;Active Pipelines;Pipeline Usage;Active Pipeline Usage;AWSCodePipeline;%activePipeline%;;
+Messaging;Email;Additional Costs;Additional Costs;Tax;AmazonSES;;;Tax%
+Messaging;Email;Recipients;SES Recipients;Recipients Usage;AmazonSES;%Recipients%;;
+Messaging;Email;Attachments;SES Attachments Size;Attachments Size Usage;AmazonSES;%AttachmentsSize-Bytes;;
+Messaging;Email;Message Handling;SES Message Chunks;Received Chunk Usage;AmazonSES;%ReceivedChunk%;;
+Messaging;Email;Messages;SES Messages;Message Usage;AmazonSES;%Message%;;
+Messaging;Messaging & Notifications;Additional Costs;Additional Costs;Tax;AmazonSNS;;;Tax%
+Messaging;Messaging & Notifications;Requests Tier 1;SNS Requests Tier 1;Requests;AmazonSNS;%Requests-Tier1;;
+Messaging;Messaging & Notifications;Requests Tier 2;SNS Requests Tier 2;Requests;AmazonSNS;%Requests-Tier2;;
+Messaging;Messaging & Notifications;Delivery Attemps;GCM Delivery Attemps;Delivery Attemps;AmazonSNS;%DeliveryAttempts-GCM;;
+Messaging;Messaging & Notifications;Delivery Attemps;SMTP Delivery Attemps;Delivery Attemps;AmazonSNS;%DeliveryAttempts-SMTP;;
+Messaging;Messaging & Notifications;Delivery Attemps;HTTP Delivery Attemps;Delivery Attemps;AmazonSNS;%DeliveryAttempts-HTTP;;
+Messaging;Messaging & Notifications;Delivery Attemps;SQS Delivery Attemps;Delivery Attemps;AmazonSNS;%DeliveryAttempts-SQS;;
+Messaging;Messaging & Notifications;SMS;SNS SMS Price;SMS;AmazonSNS;%SMS-Price%;;
+Messaging;Messaging & Notifications;SMS;SNS SMS Sent;SMS;AmazonSNS;%SMS-Sent%;;
+Messaging;Messaging & Notifications;Delivery Attemps;APNS Delivery Attemps;Delivery Attemps;AmazonSNS;%DeliveryAttempts-APNS%;;
+Messaging;Messaging & Notifications;Delivery Attemps;Lambda Delivery Attemps;Delivery Attempts;AmazonSNS;%DeliveryAttempts-LAMBDA;;
