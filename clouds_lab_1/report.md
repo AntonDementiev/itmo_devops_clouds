@@ -12,7 +12,8 @@
 
 ### AmazonES - Search & Analytics
 - используется для поиска данных, хранения логов и их анализа: `Data Transfer` - передача данных; `Storage` - хранение данных; `Instance Usage` - использование виртуальныых машин; `Provisioned IOPS` - операция ввода-вывода.
-  ![image](https://github.com/user-attachments/assets/f23761b1-f46e-407e-8f46-97b2549c5048)
+ ![image](https://github.com/user-attachments/assets/f87aab1d-be6c-41be-9172-1e7c00ce26a8)
+
 
 
 ### AmazonCloudfront - Content Delivery
