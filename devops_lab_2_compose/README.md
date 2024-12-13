@@ -186,3 +186,123 @@ networks:
     * **Управляемость:** С помощью отдельных сетей можно лучше контролировать, какие сервисы могут общаться друг с другом, что упрощает администрирование и конфигурацию сети.
 
     * **Гибкость:** Легко можно изменять конфигурацию сетей или добавлять новые сервисы без влияния на существующие.
+
+## Пример изоляции
+
+Рассмотрим изоляцию контейнеров на примере рабочего проекта.
+
+### Docker-compose файл проекта
+```yml
+services:
+  db:
+    image: postgres:14-alpine
+    container_name: db
+    hostname: db
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    networks:
+      - no-service-web
+    volumes:
+      - db:/var/lib/postgresql/data
+
+  backend: 
+    container_name: backend_hr
+    hostname: backend_hr
+    restart: always
+    build:
+      context: "./backend"
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      PROXY_USERNAME: ${PROXY_USERNAME}
+      PROXY_PASS: ${PROXY_PASS}
+      PROXY_ENDPOINT: ${PROXY_ENDPOINT}
+    ports:
+      - "8000:8000"
+    networks:
+      - service-web
+    depends_on:
+      - db
+
+networks:
+  service-web:
+    driver: bridge
+  no-service-web: 
+    driver: bridge
+
+volumes:
+  db: {}
+```
+
+Пытаемся накатить миграции, но у нас не получается, т.к. контейнеры "db" и "backend" находятся в разных сетях
+
+![alt text](image_1.png)
+![alt text](image_2.png)
+
+Теперь настроим наш docker-compose файл так, чтобы контейнеры были в одной сети.
+
+```yml
+services:
+  db:
+    image: postgres:14-alpine
+    container_name: db
+    hostname: db
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    networks:
+      - service-web
+    volumes:
+      - db:/var/lib/postgresql/data
+
+  backend: 
+    container_name: backend_hr
+    hostname: backend_hr
+    restart: always
+    build:
+      context: "./backend"
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      PROXY_USERNAME: ${PROXY_USERNAME}
+      PROXY_PASS: ${PROXY_PASS}
+      PROXY_ENDPOINT: ${PROXY_ENDPOINT}
+    ports:
+      - "8000:8000"
+    networks:
+      - service-web
+    depends_on:
+      - db
+
+networks:
+  service-web:
+    driver: bridge
+    
+volumes:
+  db: {}
+```
+
+Здесь пытаемся накатить миграции и всё успешно, т.к. контейнеры теперь находятся в одной сети.
+
+![alt text](image_3.png)
+
+Также кинем запрос на эндпоинт создания user и увидим, что user успешно создан - значит у теперь контейнеры видят друг-друга.
+
+![alt text](image_4.png)
