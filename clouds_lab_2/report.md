@@ -24,12 +24,12 @@
 
 ## Опишем сервисы, которые мы использовали:
 
-### Data Services: 
-SQL Data Waterhouse - мы используем для аналитики больших данных
+### Data Services: SQL Data Waterhouse
+  - мы используем для аналитики больших данных
 ![image](https://github.com/user-attachments/assets/30cd4dbf-e4b8-4598-9345-f74ff7b85b2d)
 
 
-### Compute:
+### Compute: Functions, Virtual Machines, Azure Batch
 Functions - серверные вычисления
 
 Virtual Machines - виртуальные машигы для вычислительных задач и хостинга приложений
@@ -38,37 +38,37 @@ Azure Batch - вычисления для обработки ольшого ко
 ![image](https://github.com/user-attachments/assets/a802b95b-763f-482b-abd9-f0cf10a895a2)
 
 
-### Insight and Analytics: 
-Log Analytics - устранение ошибок и мониторинг производительности
+### Insight and Analytics: Log Analytics
+  - устранение ошибок и мониторинг производительности
 ![image](https://github.com/user-attachments/assets/a5325817-f1e3-4ada-91b2-2ace0b81f803)
 
-### Security:
-Key Vault - управление ключами и защищённое хранение
+### Security: Key Vault
+  - управление ключами и защищённое хранение
 ![image](https://github.com/user-attachments/assets/974423e1-124b-4d01-9918-8f473e96f7ad)
 
 
-### Integration:
-Logic Appps - автоматизация процессов и интеграция процессов.
+### Integration: Logic Apps
+  - автоматизация процессов и интеграция процессов.
 ![image](https://github.com/user-attachments/assets/11aa82e2-7f55-4de3-a76e-2015da7beb77)
 
 
-### Machine Learning:
+### Machine Learning: ML Model Managment, ML Studio
 ML Model Management - управление моделями машинного обучения.
 
 ML Studio - тестирование и среда разработки для машинного обучения
 ![image](https://github.com/user-attachments/assets/40aaa43b-1062-434c-8572-bb06694654f2)
 
-### Cognitive Services:
+### Cognitive Services: Text Analytics, Emotion API
 Text Analytics - анализ текста
 
 Emotion API - распознавание эмоций в видео/фото
 ![image](https://github.com/user-attachments/assets/4d7c36fb-47f8-4a51-b121-412ff0a6b3c5)
 
-### Mobile Services:
-App Hosting - хостинг мобильных приложений (разработка и  тестирование)
+### Mobile Services: App Hosting
+  - хостинг мобильных приложений (разработка и  тестирование)
 ![image](https://github.com/user-attachments/assets/e73b98a5-5c78-4146-b8c7-f3ec4aa1211b)
 
-### Networking:
+### Networking: VPN Gateaway, Traffic Manager, Azure Firewall
 VPN Gateaway - подключние к облачным сервисам
 
 Traffic Manager - управление маршрутизацией трафика между серверами
@@ -76,20 +76,21 @@ Traffic Manager - управление маршрутизацией трафик
 Azure Firewall - защита сети от различных угроз
 ![image](https://github.com/user-attachments/assets/19da72e7-ce42-45d9-8c0c-d7ed6e3e1f78)
 
-### Storage:
-Data Transfer - передача данных между облаком и внешней системой
-![image](https://github.com/user-attachments/assets/91a9a9e7-63c0-4e3e-a1c7-e7c8e2ccc78b)
+### Storage: Data Transfer
+  - передача данных между облаком и внешней системой
+![image](https://github.com/user-attachments/assets/11da8288-bacc-4a15-9a7f-60bb3217c66c)
 
-### Media Services:
-Media Encoding - потоковая передача данных и кодирование
+
+### Media Services: Media Encoding
+  - потоковая передача данных и кодирование
 ![image](https://github.com/user-attachments/assets/4c79697a-ee9a-4868-b68b-89219754b46b)
 
-### IoT:
+### IoT: IoT Hub
 
-IoT Hub - управление устройствами IoT и подключением.
+  - управление устройствами IoT и подключением.
 ![image](https://github.com/user-attachments/assets/08001a3f-49e9-4f8a-849f-1c4648851588)
 
-### Recovery Services:
+### Recovery Services: Azure Site Recovery
 
-Azure Site Recovery - восстановление виртуальных машин для обеспечения нормального состояния и отказоустойчивости.
+  - восстановление виртуальных машин для обеспечения нормального состояния и отказоустойчивости.
 ![image](https://github.com/user-attachments/assets/30442993-c115-4e76-9c5a-c8c224ec5ff8)
