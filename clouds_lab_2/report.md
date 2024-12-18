@@ -45,14 +45,14 @@ Functions - серверные вычисления:
    - `Execution` - выполнение функций
    - `Duration` - время выполнения функции
 
-Virtual Machines - виртуальные машигы для вычислительных задач и хостинга приложений:
+Virtual Machines - виртуальные машины для вычислительных задач и хостинга приложений:
 `A, D, E, F, G, H, B, N, M, S Series` - конфигурации ВМ.
 
 Azure Batch - вычисления для обработки ольшого количества задач
 ![image](https://github.com/user-attachments/assets/a802b95b-763f-482b-abd9-f0cf10a895a2)
 
 ### Data Services: SQL Data Waterhouse
-  - мы используем для аналитики больших данных
+  - мы используем для анализа больших данных
 ![image](https://github.com/user-attachments/assets/30cd4dbf-e4b8-4598-9345-f74ff7b85b2d)
 
 ### Insight and Analytics: Log Analytics
