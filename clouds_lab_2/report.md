@@ -20,33 +20,60 @@
 ![image](https://github.com/user-attachments/assets/7e715c56-8b44-4640-b07a-542a1c112f81)
 
 2. Заполним 5 столбцов таблицы:
-![image](images/table.png)
+![image](https://github.com/user-attachments/assets/e5fbe402-dce5-45bd-be11-544e2c8d3519)
+
 
 ## Опишем сервисы, которые мы использовали:
 
-# Storage: Storage & Content Delivery
-
-![alt text](images/storage_1.png)
-
-![alt text](images/storage_2.png)
-
-## Microsoft Analysis Services
+# Storage: SQL Data Warehouse, Data Transfer:
 - **Описание**:  
-  Предоставляет инструменты для выполнения аналитических вычислений и обработки данных.
+Можно сказать, что мы используем Storage для хранения данных в Azure, имея высокопроизводительные решения для работы сбольшим обЪёмом.
   
-- **Детали использования**:  
-  - **Service Sub-Type**: Azure Synapse Analytics - SQL Analytics, SQL Data Warehouse.  
-  - **Meter Name**: Compute Optimized - использование вычислительных ресурсов.  
+![image](https://github.com/user-attachments/assets/a99e3a27-97b5-4502-a681-bd5a64416984)
+
+- **Пример использования**:  
+  - **Service Sub-Type**: Azure Synapse Analytics.  
+  - **Meter Name**: 100 DWUs - использование вычислительных ресурсов.  
   - **Consumed Service**: Microsoft.Sql  
 
 
-# Compute: Azure Functions
+# Search & Analytics (Insight & Analytics)
+![image](https://github.com/user-attachments/assets/0172c551-5d7d-4141-9a65-0348f393769b)
 
-![alt text](images/compute_1.png)
+- **Описание**:  
+  Предоставляет инструменты для выполнения аналитических вычислений и обработки данных.
+  ## Log Analytics: Data Overage per Node
+- **Описание**:  
+  Учет данных, превышающих установленный лимит.  
+  
+- **Детали использования**:  
+  - **Service Sub-Type**: Per Node - превышение лимитов данных для узлов.
+  -  **Service Usage-Type**: Node Data Overage - превышение лимитов данных для узлов.
+  - **Meter Name**: Data Overage per Node - избыточные данные.  
+  - **Consumed Service**: microsoft.operationalinsights
+![image](https://github.com/user-attachments/assets/8d28ac50-8005-46e9-8ebd-bd4668f14c7e)
 
-![alt text](images/compute_2.png)
+## Log Analytics: Data Included per Node
+- **Описание**:  
+  Учет данных, превышающих установленный лимит.  
+  
+- **Детали использования**:  
+  - **Service Sub-Type**: Per Node - превышение лимитов данных для узлов.  
+  - **Meter Name**: Data Included per Node.  
+  - **Consumed Service**: microsoft.operationalinsights
 
-## Functions Execution
+    
+# Compute: Azure Functions, Virtual Machines
+**Описание**:  
+  Предоставляет инструменты для выполнения для выполнения различных типов рабочих нагрузок.
+  
+![image](https://github.com/user-attachments/assets/1951dad9-dc40-4210-a9e4-a714947dfec3)
+- **Детали использования**: 
+Meter Category: Functions относится к серверлес-вычислениям, грубо говоря, которые выполняют код без необходимости управлять инфраструктурой. Azure Functions автоматически масштабируется и выставляет счета только за фактическое время выполнения функций.
+
+Meter Category: VM охватывает виртуальные машины, которые предоставляют полный контроль над операционной системой и вычислительными ресурсами.
+
+### Functions Execution
 - **Описание**:  
   Исполняемые функции общего назначения для выполнения операций в облаке.  
   
@@ -55,154 +82,59 @@
   - **Meter Name**: Functions Execution - выполнение функций.  
   - **Consumed Service**: Microsoft.Web  
 
-## Functions Duration
+### Functions Duration
 - **Описание**:  
   Измерение времени выполнения функций в облаке.  
   
 - **Детали использования**:  
   - **Service Sub-Type**: General Purpose - измерение времени выполнения функций.  
   - **Meter Name**: Functions Duration - длительность выполнения.  
-  - **Consumed Service**: Microsoft.Web  
+  - **Consumed Service**: Microsoft.Web
+  - 
 
+# Cloud Services: Logic Apps, Mobile Services, Key Vault, Azure Site Recovery и т.д.
+![image](https://github.com/user-attachments/assets/3c54c203-906a-4465-9867-ab044207b4dc)
 
-# Search & Analytics: Insight and Analytics
+- **Описание**:
+Cloud Services представляют собой набор сервисов, предоставляющих масштабируемую инфраструктуру и платформенные возможности для создания, развертывания и управления приложениями, мультимедиа и т.д.
 
-![alt text](images/search.png)
+## К примеру, Media Services (Microsoft.Media)
+  **Для чего?**:
+Служба Azure Media Services предоставляет инструменты для обработки, хранения, потоковой передачи и распространения мультимедийного контента, такого как видео и аудио.
 
-## Log Analytics: Data Included per Node
-- **Описание**:  
-  Анализ данных, поступающих с узлов (Nodes).  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Per Node - данные включены для каждого узла.  
-  - **Meter Name**: Data Included - включенный объем данных.  
-  - **Consumed Service**: microsoft.operationalinsights  
+# AI & ML: ML Service, ML API Services, Cognitive Services
+![image](https://github.com/user-attachments/assets/0aeeb2d3-5c44-49c8-974c-59a8f4380728)
+- **Описание**:
+Представляют собой инструменты для реализации задач, связанных с ИИ. Они обеспечивают разработку, обучение, управление и развертывание моделей ИИ, а также дают доступ к готовым API для обработки текста, изображений, речи и других данных.
 
-## Log Analytics: Data Overage per Node
-- **Описание**:  
-  Учет данных, превышающих установленный лимит.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Per Node - превышение лимитов данных для узлов.  
-  - **Meter Name**: Data Overage - избыточные данные.  
-  - **Consumed Service**: microsoft.operationalinsights  
-
-## Log Analytics: Node Monitoring
-- **Описание**:  
-  Мониторинг состояния узлов.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Node Services - услуги мониторинга узлов.  
-  - **Meter Name**: Node Monitoring - мониторинг узлов.  
-  - **Consumed Service**: microsoft.operationalinsights  
-
-
-# Security & Identity: Azure Key Vault
-
-![alt text](images/security.png)
-
-## Secrets Management
-- **Описание**:  
-  Обеспечивает безопасное хранение секретов, таких как ключи шифрования и пароли.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Secure Storage - безопасное хранилище секретов.  
-  - **Meter Name**: Secrets Management - управление секретами.  
-  - **Consumed Service**: Microsoft.KeyVault  
-
-
-# Cloud Services: Logic Apps
-
-![alt text](images/cloud_1.png)
-
-![alt text](images/cloud_2.png)
-
-![alt text](images/cloud_3.png)
-
-![alt text](images/cloud_4.png)
-
-## Workflow Automation
-- **Описание**:  
-  Автоматизация рабочих процессов с использованием Azure Logic Apps.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Standard Workflow - стандартный рабочий процесс.  
-  - **Meter Name**: Workflow Hours - часы рабочего процесса.  
-  - **Consumed Service**: Microsoft.Logic  
-
-
-# AI & ML
-
-![alt text](images/ai_1.png)
-
-![alt text](images/ai_2.png)
-
-## ML Model Management
+## Например, ML Studio
 - **Описание**:  
   Управление развертыванием и обслуживанием моделей машинного обучения.  
-  
 - **Детали использования**:  
-  - **Service Sub-Type**: Tier - тарифный план.  
-  - **Meter Name**: ML Tier Usage - использование уровня тарифа.  
-  - **Consumed Service**: Microsoft.MachineLearningModelManagement  
+ • Пример из таблицы:
+ ◦ **Meter Name**:  Standard Workspace Fee
+- **Consumed Service**: Microsoft.MachineLearning  
+ • Использование:
+ ◦Визуальная разработка и настройка моделей, хранение данных для обучения и т.д. 
 
-## ML Studio
-- **Workspace Fee**:  
-  - **Описание**: Стандартная плата за использование ML Studio.  
-  - **Meter Name**: Workspace Fee - фиксированная плата.  
-  - **Consumed Service**: Microsoft.MachineLearning  
-
-- **Experiment Compute**:  
-  - **Описание**: Использование вычислительных ресурсов для экспериментов.  
-  - **Meter Name**: Compute Hours - вычислительные часы.  
-  - **Consumed Service**: Microsoft.MachineLearning  
-
-## ML API Services
-- **Описание**:  
-  Инструменты API для анализа текста и других задач машинного обучения.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Text Analytics - API для текстового анализа.  
-  - **Meter Name**: Free API Calls - бесплатные вызовы API.  
-  - **Consumed Service**: Microsoft.CognitiveServices  
-
-
-# Networking
-
-![alt text](images/network.png)
+# Networking: VPN Gateaway, Data Transfer Out, Endpoint Management, Domain Management и 
+![image](https://github.com/user-attachments/assets/cb812d97-e738-486a-9788-24769c839e4b)
 
 ## VPN Gateway
+ • Описание:
+Сервис для создания защищенных VPN-соединений между локальной сетью и Azure либо между разными регионами Azure.
+
 - **Gateway**:  
   - **Описание**: Подключение через VPN.  
-  - **Meter Name**: Gateway Hours - часы работы VPN.  
-  - **Consumed Service**: Microsoft.Network  
-
-- **Data Transfer**:  
-  - **Описание**: Передача данных через шлюз.  
-  - **Meter Name**: Data Transfer Out - объем данных.  
   - **Consumed Service**: Microsoft.Network  
 
 ## Traffic Manager
 - **Azure Endpoint**:  
   - **Описание**: Управление конечными точками.  
-  - **Meter Name**: Endpoint Hours - часы конечных точек.  
   - **Consumed Service**: Microsoft.Network  
 
-- **DNS Queries**:  
-  - **Описание**: Управление запросами DNS.  
-  - **Meter Name**: Query Usage - количество запросов.  
-  - **Consumed Service**: Microsoft.Network  
-
-
-# Recovery Services: Azure Site Recovery
-
-![alt text](images/recovery.png)
-
-## VM Replicated to Azure
-- **Описание**:  
-  Репликация виртуальных машин в облако Azure для аварийного восстановления.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: VM Replication - репликация виртуальных машин.  
-  - **Meter Name**: Recovery Usage - объем использования.  
-  - **Consumed Service**: Microsoft.RecoveryServices  
+- **Azure Firewall**:  
+  - **Описание**: Сервис для обеспечения безопасности сети, позволяющий контролировать входящий и исходящий трафик через правила безопасности..  
+ • Используемые метрики:
+ ◦ Deployment: Учет количества развертываний Azure Firewall.
+ ◦ Data Processed: Учет объема данных, обработанных через Azure Firewall.
