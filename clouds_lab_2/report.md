@@ -19,7 +19,8 @@
 ![image](https://github.com/user-attachments/assets/7e715c56-8b44-4640-b07a-542a1c112f81)
 
 2. Заполним 5 столбцов таблицы:
-![image](https://github.com/user-attachments/assets/04b32d8a-3c15-4887-8838-0e5df958e06b)
+![image](https://github.com/user-attachments/assets/d257e82b-9680-48cf-8928-6a10fb0f0acd)
+
 
 
 
