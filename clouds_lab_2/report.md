@@ -1,5 +1,4 @@
-![image](https://github.com/user-attachments/assets/a845d2b8-a6b6-42c7-bf2f-a64837aaa529)![image](https://github.com/user-attachments/assets/f64b36f1-94f1-407f-917b-a3924cc552e2)# Лабораторная работа 2. Сравнение сервисов Amazon Web Services и Microsoft Azure. Создание единой кросс-провайдерной сервисной модели.
-
+# Лабораторная работа 2. Сравнение сервисов Amazon Web Services и Microsoft Azure. Создание единой кросс-провайдерной сервисной модели.
 ## 3 вариант
 
 ## Цель работы: 
@@ -20,7 +19,8 @@
 ![image](https://github.com/user-attachments/assets/7e715c56-8b44-4640-b07a-542a1c112f81)
 
 2. Заполним 5 столбцов таблицы:
-![image](https://github.com/user-attachments/assets/1e51550a-abae-409e-bdb2-73dc92950d03)
+![image](https://github.com/user-attachments/assets/04b32d8a-3c15-4887-8838-0e5df958e06b)
+
 
 
 
