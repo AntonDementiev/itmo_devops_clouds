@@ -1,5 +1,4 @@
 # Лабораторная работа 2. Сравнение сервисов Amazon Web Services и Microsoft Azure. Создание единой кросс-провайдерной сервисной модели.
-
 ## 3 вариант
 
 ## Цель работы: 
@@ -20,189 +19,79 @@
 ![image](https://github.com/user-attachments/assets/7e715c56-8b44-4640-b07a-542a1c112f81)
 
 2. Заполним 5 столбцов таблицы:
-![image](images/table.png)
+![image](https://github.com/user-attachments/assets/d257e82b-9680-48cf-8928-6a10fb0f0acd)
+
+
+
+
 
 ## Опишем сервисы, которые мы использовали:
 
-# Storage: Storage & Content Delivery
-
-![alt text](images/storage_1.png)
-
-![alt text](images/storage_2.png)
-
-## Microsoft Analysis Services
+# SQL Data Warehouse (Database):
 - **Описание**:  
-  Предоставляет инструменты для выполнения аналитических вычислений и обработки данных.
+это облачное решение для обработки и анализа больших объёмов данных от Microsoft Azure. Оно предоставляет масштабируемую и полностью управляемую платформу. Основными плюсами для неё являются масштабируемость и отличные функции безопасности.
   
-- **Детали использования**:  
-  - **Service Sub-Type**: Azure Synapse Analytics - SQL Analytics, SQL Data Warehouse.  
-  - **Meter Name**: Compute Optimized - использование вычислительных ресурсов.  
-  - **Consumed Service**: Microsoft.Sql  
-
-
-# Compute: Azure Functions
-
-![alt text](images/compute_1.png)
-
-![alt text](images/compute_2.png)
-
-## Functions Execution
+# Azure Functions(Cloud Service)
 - **Описание**:  
-  Исполняемые функции общего назначения для выполнения операций в облаке.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: General Purpose - использование функций общего назначения.  
-  - **Meter Name**: Functions Execution - выполнение функций.  
-  - **Consumed Service**: Microsoft.Web  
+это бессерверное решение, которое позволяет в меньшем объеме писать код и поддерживать инфраструктуру, а также экономить затраты. Вам не придется беспокоиться о развертывании и обслуживании серверов.
 
-## Functions Duration
+# Operational Insights (Cloud Service)
 - **Описание**:  
-  Измерение времени выполнения функций в облаке.  
+   это инструмент для интерактивной отчётности и аналитики. Решение использует облако для хранения и индексирования больших объёмов данных, собранных либо в локальной среде, либо в облаке (можно и в обоих средах), и предоставляет услугу, которую большинству организаций было бы сложно предоставить локально из-за затрат и сложности работы с такими большими объёмами данных.
   
-- **Детали использования**:  
-  - **Service Sub-Type**: General Purpose - измерение времени выполнения функций.  
-  - **Meter Name**: Functions Duration - длительность выполнения.  
-  - **Consumed Service**: Microsoft.Web  
-
-
-# Search & Analytics: Insight and Analytics
-
-![alt text](images/search.png)
-
-## Log Analytics: Data Included per Node
+# Key Vault (Cloud service)
 - **Описание**:  
-  Анализ данных, поступающих с узлов (Nodes).  
+ Azure Key Vault — это облачная служба для безопасного хранения секретов (ключи от API, пароли, крипто-ключи) и доступа к ним. 
+    
+# Azure Logic Apps (Cloud Service)
+**Описание**:  
+  Azure Logic Apps — это облачная платформа, в которой можно создавать автоматизированные рабочие процессы без кода. С помощью визуального конструктора и выбора из предварительно созданных операций можно быстро создать рабочий процесс, который интегрирует приложения, данные, службы и системы и управляет ими. 
   
-- **Детали использования**:  
-  - **Service Sub-Type**: Per Node - данные включены для каждого узла.  
-  - **Meter Name**: Data Included - включенный объем данных.  
-  - **Consumed Service**: microsoft.operationalinsights  
 
-## Log Analytics: Data Overage per Node
+# Azure Machine Learning (Cloud Service)
 - **Описание**:  
-  Учет данных, превышающих установленный лимит.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Per Node - превышение лимитов данных для узлов.  
-  - **Meter Name**: Data Overage - избыточные данные.  
-  - **Consumed Service**: microsoft.operationalinsights  
+  Azure ML — это облачная платформа от Microsoft Azure, которая предоставляет возможности сквозного машинного обучения в облаке. Ты сможешь выполнять действия от разработки модели до запуска экспериментов и развёртывания модели.    
 
-## Log Analytics: Node Monitoring
+# Azure Mobile Services (Cloud Service)
+- **Описание**: 
+Mobile Services Azure — это облачный сервис, предназначенный для разработки функциональных мобильных приложений. Он предлагает облачную инфраструктуру для популярных мобильных платформ: Windows 8, Windows Phone, iOS и Android.
+
+# Azure VPN Gateway (Networking)
 - **Описание**:  
-  Мониторинг состояния узлов.  
+  Это ключевой компонент сетевых сервисов Microsoft Azure, обеспечивающий безопасное и масштабируемое подключение между локальными сетями, удаленными пользователями и ресурсами Azure.  
   
-- **Детали использования**:  
-  - **Service Sub-Type**: Node Services - услуги мониторинга узлов.  
-  - **Meter Name**: Node Monitoring - мониторинг узлов.  
-  - **Consumed Service**: microsoft.operationalinsights  
+# Traffic Manager(Cloud Service)
+  - **Описание**:  
+   Azure Traffic Manager — это инструмент для управления трафиком в облачной платформе Microsoft Azure. Он работает на уровне DNS, чтобы быстро и эффективно направлять входящие запросы. Также, он предоставляет аналитические сведения о пользователях, например, можно посмотреть отчёты, которые показывают распределение трафика по конечным точкам.
 
+# Azure Firewall (Cloude Service)
+- **Описание**:
+Это управляемая облачная служба для обеспечения безопасности сети, которая защищает ресурсы виртуальной сети Azure. Большой плюс для этой службы является предотвращение передачи вредоносных программ через зашифрованные соединения, а также запрет трафика, поступающего от вредоносных IP-адресов и доменов или к ним. 
 
-# Security & Identity: Azure Key Vault
+# Azure Site Recovery (Cloud Service)
+- **Описание**:
+Azure Site Recovery — это служба от Microsoft Azure, которая обеспечивает непрерывность, поддерживая работу приложений и рабочих нагрузок во время сбоев. Сервис предлагает гибкость в репликации и не ограничивает пользователей облаком Azure: он поддерживает репликацию в другое локальное расположение или из одного региона Azure в другой. 
 
-![alt text](images/security.png)
+# Azure Cognitive Services(Cloud Service)
+- **Описание**:
+ Azure Cognitive Services — это облачные сервисы искусственного интеллекта, которые помогают разработчикам создавать интеллектуальные приложения. С их помощью можно встроить в приложения способность видеть, слышать, говорить, искать, понимать и ускорять принятие решений. 
 
-## Secrets Management
-- **Описание**:  
-  Обеспечивает безопасное хранение секретов, таких как ключи шифрования и пароли.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Secure Storage - безопасное хранилище секретов.  
-  - **Meter Name**: Secrets Management - управление секретами.  
-  - **Consumed Service**: Microsoft.KeyVault  
+# SignalR (Cloud Service)
+- **Описание**:
+ SignalR может использоваться в приложениях, которые получают данные в реальном режиме времени, например, чаты, социальные сети, игровые приложения, карты, приложения для аукционов, голосований и карт, панели управления, приложения для мониторинга данных и так далее. Грубо говоря, это библиотека для разработчиков, которая упрощает процесс добавления веб-функций в режиме реального времени в приложения.
 
+# Event Grid (Cloud Service)
+- **Описание**:
+ Event Grid — это сервис, который позволяет маршрутизировать события из любого источника в любое место. С его помощью можно реагировать на изменения в ресурсах Azure.
 
-# Cloud Services: Logic Apps
+# Azure Media Services (Cloud Service)
+- **Описание**:
+Azure Media Services — это компонент облачной платформы Microsoft Azure, который предоставляет набор инструментов для управления, обработки и доставки цифрового мультимедийного контента.
 
-![alt text](images/cloud_1.png)
+#  Azure IoT Hub (Cloud Service)
+- **Описание**:
+Azure IoT Hub — это облачный сервис от Microsoft, который позволяет организациям управлять, мониторить и контролировать устройства IoT. Он обеспечивает двунаправленную связь между миллионами управляемых устройств и приложениями IoT.
 
-![alt text](images/cloud_2.png)
-
-![alt text](images/cloud_3.png)
-
-![alt text](images/cloud_4.png)
-
-## Workflow Automation
-- **Описание**:  
-  Автоматизация рабочих процессов с использованием Azure Logic Apps.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Standard Workflow - стандартный рабочий процесс.  
-  - **Meter Name**: Workflow Hours - часы рабочего процесса.  
-  - **Consumed Service**: Microsoft.Logic  
-
-
-# AI & ML
-
-![alt text](images/ai_1.png)
-
-![alt text](images/ai_2.png)
-
-## ML Model Management
-- **Описание**:  
-  Управление развертыванием и обслуживанием моделей машинного обучения.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Tier - тарифный план.  
-  - **Meter Name**: ML Tier Usage - использование уровня тарифа.  
-  - **Consumed Service**: Microsoft.MachineLearningModelManagement  
-
-## ML Studio
-- **Workspace Fee**:  
-  - **Описание**: Стандартная плата за использование ML Studio.  
-  - **Meter Name**: Workspace Fee - фиксированная плата.  
-  - **Consumed Service**: Microsoft.MachineLearning  
-
-- **Experiment Compute**:  
-  - **Описание**: Использование вычислительных ресурсов для экспериментов.  
-  - **Meter Name**: Compute Hours - вычислительные часы.  
-  - **Consumed Service**: Microsoft.MachineLearning  
-
-## ML API Services
-- **Описание**:  
-  Инструменты API для анализа текста и других задач машинного обучения.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: Text Analytics - API для текстового анализа.  
-  - **Meter Name**: Free API Calls - бесплатные вызовы API.  
-  - **Consumed Service**: Microsoft.CognitiveServices  
-
-
-# Networking
-
-![alt text](images/network.png)
-
-## VPN Gateway
-- **Gateway**:  
-  - **Описание**: Подключение через VPN.  
-  - **Meter Name**: Gateway Hours - часы работы VPN.  
-  - **Consumed Service**: Microsoft.Network  
-
-- **Data Transfer**:  
-  - **Описание**: Передача данных через шлюз.  
-  - **Meter Name**: Data Transfer Out - объем данных.  
-  - **Consumed Service**: Microsoft.Network  
-
-## Traffic Manager
-- **Azure Endpoint**:  
-  - **Описание**: Управление конечными точками.  
-  - **Meter Name**: Endpoint Hours - часы конечных точек.  
-  - **Consumed Service**: Microsoft.Network  
-
-- **DNS Queries**:  
-  - **Описание**: Управление запросами DNS.  
-  - **Meter Name**: Query Usage - количество запросов.  
-  - **Consumed Service**: Microsoft.Network  
-
-
-# Recovery Services: Azure Site Recovery
-
-![alt text](images/recovery.png)
-
-## VM Replicated to Azure
-- **Описание**:  
-  Репликация виртуальных машин в облако Azure для аварийного восстановления.  
-  
-- **Детали использования**:  
-  - **Service Sub-Type**: VM Replication - репликация виртуальных машин.  
-  - **Meter Name**: Recovery Usage - объем использования.  
-  - **Consumed Service**: Microsoft.RecoveryServices  
+#  Azure VM (Compute)
+- **Описание**:
+Azure Virtual Machines — это сервис, который позволяет создавать и запускать виртуальные машины в облаке. С его помощью можно размещать в облачной среде приложения и системы на операционных системах Windows и Linux.
